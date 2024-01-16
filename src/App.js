@@ -1,23 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from "./Card";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h1 className='text-center'>React Price Card</h1>
+      <div className='row'>
+      <Card 
+      name="free" 
+      price="$0/month" 
+      user="single user" 
+      storage ="50GB storage" 
+      public="unlimited public projects" 
+      Access="community access" 
+      private="unlimited private projects" 
+      privateDisabled={true} 
+      support="dedictaed phone support" 
+      supportDisabled={true} 
+      subdomain="free subdomain" 
+      subdomainDisabled={true} 
+      status="monthly status reports" 
+      statusDisabled={true}></Card>
+      
+      <Card name="plus" 
+      price="$9/month" 
+      user="5 users" 
+      storage ="50GB storage" 
+      public="unlimited public projects" 
+      Access="community access" 
+      private="unlimited private projects" 
+      support="dedictaed phone support" 
+      subdomain="free subdomain" 
+      status="monthly status reports" 
+      statusDisabled={true}> </Card>
+
+      <Card name="pro" 
+      price="$49/month" 
+      user="unlimited users" 
+      storage ="50GB storage" 
+      public="Unlimited public projects" 
+      Access="community access" 
+      private="unlimited private projects" 
+      support="dedictaed phone support" 
+      subdomain="free subdomain" 
+      status="monthly status reports"></Card>
+      </div> 
     </div>
   );
 }
